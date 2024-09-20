@@ -21,7 +21,7 @@
 		year = Integer.parseInt(request.getParameter("year"));
 	}
 	catch(Exception e){
-		
+		year = Integer.parseInt(request.getParameter("year"));
 	}
 %>
     
