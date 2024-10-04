@@ -16,7 +16,7 @@
 %>
 
 <%
-	int year; 
+	int year = 0; 
 	try{
 		year = Integer.parseInt(request.getParameter("year"));
 	}
@@ -41,8 +41,17 @@
 		<title>Insert title here</title>
 	</head>
 	<body>
-		<%= year %>년에 태어난 당신은
-		<%=todayint%>년 올해 한국나이로 <%= Age(year,todayint) %>살이고
+	<% if(year != 0) { %>
+		<%= year %>년에 태어난 당신은<br>
+		<%=todayint%>년 올해 한국나이로 <%= Age(year,todayint) %>살이고<br>
 		<%= Zodiac(year) %>띠입니다.
+		
+      <% }
+		else{ %>
+	  		<H1>값이 입력되지 않았습니다.</H1>
+
+
+	   <% }%>
+		 
 	</body>
 </html>
